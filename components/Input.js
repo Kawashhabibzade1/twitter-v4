@@ -15,15 +15,17 @@ export default function Input() {
         <div className="w-full ">
           <textarea
             rows="2"
-            className="w-full min-h-[50px] text-lg placeholder-gray-400 text-gray-700 focus:ring-0 tracking-wide "
+            className="w-full min-h-[50px] text-lg placeholder-gray-400 text-gray-700 focus:ring-0 border-none tracking-wide "
             placeholder="What's happening"></textarea>
         </div>
-        <div>
+        <div className="flex">
           <div className="flex">
-            <PhotographIcon className="w-10" />
-            <EmojiHappyIcon className="w-10" />
+            <PhotographIcon className="w-11 hoverEffect" />
+            <EmojiHappyIcon className="w-11 hoverEffect" />
           </div>
-          <button>Tweet</button>
+          <button className="bg-blue-400 ml-auto  w-[6rem] rounded-full hover:brightness-95 text-white font-bold shadow-md text-lg">
+            Tweet
+          </button>
         </div>
       </div>
     </div>
