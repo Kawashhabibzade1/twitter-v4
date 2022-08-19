@@ -18,9 +18,8 @@ export default function Sidebar() {
   return (
     <div className="hidden sm:flex flex-col p-2 xl:items-start fixed h-full ">
       {/* Sidebar logo */}
-      <div className="hoverEffect  hover:bg-blue-100 xl:px-[1px] justify-center items-center flex">
+      <div className="hoverEffect  hover:bg-blue-100 xl:px-[1px] sm:p-2 ">
         <Image
-          className="sm:mt-5"
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Twitter-logo.svg/1200px-Twitter-logo.svg.png"
           width={40}
           height={35}></Image>
