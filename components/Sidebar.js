@@ -16,7 +16,7 @@ import {
 
 export default function Sidebar() {
   return (
-    <div className="hidden sm:flex flex-col p-2 xl:items-start fixed h-full bg-red-100 xl:bg-white">
+    <div className="hidden sm:flex flex-col p-2 xl:items-start fixed h-full ">
       {/* Sidebar logo */}
       <div className="hoverEffect  hover:bg-blue-100 xl:px-[1px]">
         <Image
