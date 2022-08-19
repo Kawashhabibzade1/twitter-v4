@@ -41,13 +41,13 @@ export default function Sidebar() {
         tweet
       </button>
       {/* Sidebar mini-profile */}
-      <div className="hoverEffect flex  items-center justify-center xl:justify-start mt-auto">
+      <div className="hoverEffect  flex  items-center justify-center xl:justify-start mt-auto">
         <img
-          className="rounded-full h-10 w-10 xl:mr-2 "
+          className="rounded-full  xl:mr-2 w-10 h-10 "
           src="https://media-exp1.licdn.com/dms/image/C4D03AQH7xcKUw3Svfg/profile-displayphoto-shrink_100_100/0/1657620735523?e=1666224000&v=beta&t=ssizmeOh18nM_NQsDsbu5r7-hbOOYQ7Httw30yPguMk"
           alt="my-profile"
         />
-        <div className="">
+        <div className="flex flex-col">
           <h4 className="font-bold hidden leading-5  xl:inline ">
             Mir Kawash Habibzade
           </h4>
