@@ -16,7 +16,7 @@ import {
 
 export default function Sidebar() {
   return (
-    <div>
+    <div className="hidden sm:flex flex-col p-2 xl:items-start fixed h-full">
       {/* Sidebar logo */}
       <div className="hoverEffect m-1">
         <Image
@@ -37,21 +37,25 @@ export default function Sidebar() {
         <SidebarMenuItem text="More" Icon={DotsCircleHorizontalIcon} />
       </div>
       {/* button */}
-      <button>tweet</button>
+      <button className="bg-blue-400 w-56 h-12 rounded-full hover:brightness-95 text-white font-bold shadow-md text-lg hidden xl:inline">
+        tweet
+      </button>
       {/* Sidebar mini-profile */}
-      <div className="hoverEffect flex  items-center xl:justify-start">
+      <div className="hoverEffect flex  items-center justify-center xl:justify-start mt-auto">
         <img
-          className="rounded-full"
+          className="rounded-full h-10 w-10 xl:mr-2 "
           src="https://media-exp1.licdn.com/dms/image/C4D03AQH7xcKUw3Svfg/profile-displayphoto-shrink_100_100/0/1657620735523?e=1666224000&v=beta&t=ssizmeOh18nM_NQsDsbu5r7-hbOOYQ7Httw30yPguMk"
           alt="my-profile"
-          width={50}
-          height={50}
         />
-        <div className="flex ">
-          <h4>Mir Kawash Habibzade</h4>
-          <p>Creative Head</p>
-          <DotsHorizontalIcon className="h-5 ml-3" />
+        <div className="">
+          <h4 className="font-bold hidden leading-5  xl:inline ">
+            Mir Kawash Habibzade
+          </h4>
+          <p className="hidden xl:inline  text-gray-500">
+            Co-Founder & Creative Head
+          </p>
         </div>
+        <DotsHorizontalIcon className="h-5 xl:ml-8 hidden xl:inline" />
       </div>
     </div>
   );
