@@ -11,7 +11,7 @@ import React from "react";
 
 export default function Post({ post }) {
   return (
-    <div className="flex justify-start items-start">
+    <div className="flex justify-start items-start p-2">
       {/* Image */}
       <img
         src={post.userImg}
@@ -25,7 +25,7 @@ export default function Post({ post }) {
         <div className="flex justify-between p-2">
           {/* post user info */}
           <div>
-            <h4>{post.name}</h4>
+            <h4 className="font-bold text-lg">{post.name}</h4>
             <span className="text-gray-500">{post.username}</span>
             <span className="text-gray-300">{post.timeStamp}</span>
           </div>
@@ -42,7 +42,7 @@ export default function Post({ post }) {
         <img src={post.img} alt="post-img" />
 
         {/* Icons */}
-        <div>
+        <div className="flex justify-between items-center p-3">
           <ChatIcon className="h-9" />
           <HeartIcon className="h-9" />
           <TrashIcon className="h-9" />
