@@ -16,7 +16,7 @@ export default function Post({ post }) {
       <img
         src={post.userImg}
         alt="user-img"
-        className="rounded-full h-[4rem] p-1 mr-4 hoverEffect"
+        className="rounded-full h-[4rem] p-1 mr-4 w-11 h-11 hoverEffect"
       />
 
       {/* Right Side div */}
