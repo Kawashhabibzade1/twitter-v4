@@ -16,7 +16,7 @@ export default function Post({ post }) {
       <img
         src={post.userImg}
         alt="user-img"
-        className="rounded-full h-[4rem] p-1 mr-4"
+        className="rounded-full h-[4rem] p-1 mr-4 hoverEffect"
       />
 
       {/* Right Side div */}
@@ -24,9 +24,11 @@ export default function Post({ post }) {
         {/* Header */}
         <div className="flex justify-between p-2">
           {/* post user info */}
-          <div className="space-x-2">
+          <div className="space-x-2 flex justify-center items-center">
             <h4 className="font-bold text-lg hover:underline ">{post.name}</h4>
-            <span className="text-gray-500 ">@{post.username}</span>
+            <span className="text-gray-500 text-sm sm:text-md ">
+              @{post.username}
+            </span>
             <span className="text-gray-300">{post.timeStamp}</span>
           </div>
 
