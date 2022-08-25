@@ -26,6 +26,16 @@ export default function Feed() {
       timeStamp: "2 hours ago..",
       text: "nice look!",
     },
+    {
+      id: 2,
+      name: "Zainuddin Mughal",
+      username: "Zainuddin ",
+      userImg:
+        "https://pbs.twimg.com/profile_images/1550993429542363137/OuGb5DcT_400x400.jpg",
+      img: "https://images.unsplash.com/photo-1585250003680-b12dbff01e65?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+      timeStamp: "2 minutes ago..",
+      text: "i am Stupid i know ",
+    },
   ];
 
   return (
