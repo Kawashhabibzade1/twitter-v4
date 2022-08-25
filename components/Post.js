@@ -11,12 +11,12 @@ import React from "react";
 
 export default function Post({ post }) {
   return (
-    <div className="flex justify-start items-start p-2">
+    <div className="flex justify-start items-start p-2 mr-1">
       {/* Image */}
       <img
         src={post.userImg}
         alt="user-img"
-        className="rounded-full h-[4rem] p-1"
+        className="rounded-full h-[4rem] p-1 mr-4"
       />
 
       {/* Right Side div */}
@@ -32,7 +32,7 @@ export default function Post({ post }) {
 
           {/* dot Icon */}
           <div>
-            <DotsHorizontalIcon className="h-10" />
+            <DotsHorizontalIcon className="h-10 hoverEffect w-10 hover:bg-sky-100 hover:text-blue-500" />
           </div>
         </div>
         {/* post Text */}
@@ -43,10 +43,10 @@ export default function Post({ post }) {
 
         {/* Icons */}
         <div className="flex justify-between items-center p-3">
-          <ChatIcon className="h-9" />
-          <HeartIcon className="h-9" />
-          <TrashIcon className="h-9" />
-          <ShareIcon className="h-9" />
+          <ChatIcon className="h-11 hoverEffect w-11 p-1 hover:bg-sky-100 hover:text-blue-500" />
+          <HeartIcon className="h-11 hoverEffect w-11  p-1 hover:bg-red-100 hover:text-red-500" />
+          <TrashIcon className="h-11 hoverEffect w-11 p-1 hover:bg-gray-100 hover:text-gray-500" />
+          <ShareIcon className="h-11 hoverEffect w-11 p-1 hover:bg--100 hover:text-blue-500" />
         </div>
       </div>
     </div>
