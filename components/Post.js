@@ -11,7 +11,7 @@ import React from "react";
 
 export default function Post({ post }) {
   return (
-    <div className="flex justify-start items-start p-2 mr-1">
+    <div className="flex justify-start items-start p-2 mr-1 cursor-pointer">
       {/* Image */}
       <img
         src={post.userImg}
@@ -24,9 +24,9 @@ export default function Post({ post }) {
         {/* Header */}
         <div className="flex justify-between p-2">
           {/* post user info */}
-          <div>
-            <h4 className="font-bold text-lg">{post.name}</h4>
-            <span className="text-gray-500">{post.username}</span>
+          <div className="space-x-2">
+            <h4 className="font-bold text-lg hover:underline ">{post.name}</h4>
+            <span className="text-gray-500 ">@{post.username}</span>
             <span className="text-gray-300">{post.timeStamp}</span>
           </div>
 
@@ -43,10 +43,10 @@ export default function Post({ post }) {
 
         {/* Icons */}
         <div className="flex justify-between items-center p-3">
-          <ChatIcon className="h-11 hoverEffect w-11 p-1 hover:bg-sky-100 hover:text-blue-500" />
-          <HeartIcon className="h-11 hoverEffect w-11  p-1 hover:bg-red-100 hover:text-red-500" />
-          <TrashIcon className="h-11 hoverEffect w-11 p-1 hover:bg-gray-100 hover:text-gray-500" />
-          <ShareIcon className="h-11 hoverEffect w-11 p-1 hover:bg--100 hover:text-blue-500" />
+          <ChatIcon className="h-11 hoverEffect w-11 p-1.5 hover:bg-sky-100 hover:text-blue-500" />
+          <HeartIcon className="h-11 hoverEffect w-11  p-1.5 hover:bg-red-100 hover:text-red-500" />
+          <TrashIcon className="h-11 hoverEffect w-11 p-1.5 hover:bg-gray-100 hover:text-gray-500" />
+          <ShareIcon className="h-11 hoverEffect w-11 p-1.5 hover:bg-sky-100 hover:text-blue-500" />
         </div>
       </div>
     </div>
