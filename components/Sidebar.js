@@ -20,6 +20,7 @@ export default function Sidebar() {
       {/* Sidebar logo */}
       <div className="hoverEffect  hover:bg-blue-100 xl:px-[1px] sm:p-2 ">
         <Image
+          className="w-10 h-10"
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Twitter-logo.svg/1200px-Twitter-logo.svg.png"
           width={40}
           height={35}></Image>
