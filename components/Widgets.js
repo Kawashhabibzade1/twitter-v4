@@ -2,8 +2,9 @@
 import { SearchIcon } from "@heroicons/react/outline";
 import { useState } from "react";
 import News from "./News";
-const Widgets = ({ newsResults }) => {
+const Widgets = ({ newsResults, randomUserResults }) => {
   const [change, setChange] = useState(3);
+  const [changeR, setChangeR] = useState(3);
 
   return (
     <>
@@ -29,6 +30,39 @@ const Widgets = ({ newsResults }) => {
           <button
             className="text-blue-300 hover:text-blue-400"
             onClick={() => setChange(change + 3)}>
+            Show more...
+          </button>
+        </div>
+
+        <div className="xl:w-[75%] w-[90%] text-gray-600 space-y-3 bg-gray-100 rounded-xl p-2">
+          <h4 className="text-gray-700 text-lg font-bold">Who to Follow?</h4>
+          {randomUserResults.slice(0, changeR).map((randomUser) => (
+            <div
+              key={randomUser.login.username}
+              className="flex items-center justify-between hover:bg-gray-200 p-2 cursor-pointer rounded-xl">
+              <img
+                src={randomUser.picture.thumbnail}
+                alt=""
+                className="rounded-lg w-12"
+              />
+              <div className="flex-col  ">
+                <div className="flex space-x-1.5 font-serif">
+                  <h4>{randomUser.name.title}</h4>
+                  <h4>{randomUser.name.first}</h4>
+                  <h4>{randomUser.name.last}</h4>
+                </div>
+                <h4 className="text-gray-400">@{randomUser.login.username}</h4>
+              </div>
+              <button className="rounded-xl w-[5rem] h-7  bg-blue-400 hover:bg-blue-500 text-white">
+                follow
+              </button>
+            </div>
+          ))}
+          <button
+            className="text-blue-300 hover:text-blue-500 "
+            onClick={() => {
+              setChangeR(changeR + 3);
+            }}>
             Show more...
           </button>
         </div>
