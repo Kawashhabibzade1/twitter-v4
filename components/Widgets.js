@@ -3,7 +3,7 @@ import { SearchIcon } from "@heroicons/react/outline";
 import { useState } from "react";
 import News from "./News";
 const Widgets = ({ newsResults }) => {
-  const [change, setChange] = useState(1);
+  const [change, setChange] = useState(3);
 
   return (
     <>
@@ -37,4 +37,4 @@ const Widgets = ({ newsResults }) => {
   );
 };
 
-export default widgets;
+export default Widgets;
