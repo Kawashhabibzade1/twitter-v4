@@ -34,26 +34,26 @@ const Widgets = ({ newsResults, randomUserResults }) => {
           </button>
         </div>
 
-        <div className="xl:w-[75%] w-[90%] sm:w-[90%]  text-gray-600  bg-gray-100 rounded-xl pl-2 pr-2 pt-1 space-y-2">
+        <div className="xl:w-[75%] w-[90%] sm:w-[90%]  text-gray-600 top-16 sticky bg-gray-100 rounded-xl pl-2 pr-2 pt-1 space-y-2">
           <h4 className="text-gray-700 text-lg font-bold">Who to Follow?</h4>
           {randomUserResults.slice(0, changeR).map((randomUser) => (
             <div
               key={randomUser.login.username}
-              className="flex items-center justify-between hover:bg-gray-200 p-1 cursor-pointer rounded-xl overflow-x-auto">
+              className="flex items-start justify-between hover:bg-gray-200 p-1 cursor-pointer rounded-xl overflow-x-auto">
               <img
                 src={randomUser.picture.thumbnail}
                 alt=""
                 className="rounded-lg lg:w-12 w-6 "
               />
-              <div className="flex-col text-sm sm:text-md ">
-                <div className="flex space-x-1 font-serif">
+              <div className="flex-col text-sm sm:text-md truncate ">
+                <div className="flex space-x-1 font-serif truncate">
                   <h4 className="text-[12px] lg:text-xl">
                     {randomUser.name.title}
                   </h4>
                   <h4 className="text-[12px] lg:text-xl">
                     {randomUser.name.first}
                   </h4>
-                  <h4 className="text-[12px] lg:text-xl">
+                  <h4 className="text-[12px] lg:text-xl truncate">
                     {randomUser.name.last}
                   </h4>
                 </div>
