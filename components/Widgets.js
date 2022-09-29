@@ -43,7 +43,7 @@ const Widgets = ({ newsResults, randomUserResults }) => {
               <img
                 src={randomUser.picture.thumbnail}
                 alt=""
-                className="rounded-lg lg:w-12 w-6 "
+                className="rounded-full lg:w-12 w-6 "
               />
               <div className="flex-col text-sm sm:text-md truncate ">
                 <div className="flex space-x-1 font-serif truncate">
