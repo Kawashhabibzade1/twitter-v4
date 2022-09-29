@@ -22,7 +22,7 @@ const Widgets = ({ newsResults, randomUserResults }) => {
             />
           </div>
         </div>
-        <div className="  xl:w-[75%] w-[90%] text-gray-700 space-y-3 bg-gray-100 rounded-xl  border border-gray-300 p-3">
+        <div className="  xl:w-[75%] w-[90%] flex-1 text-gray-700 space-y-3 bg-gray-100 rounded-xl  border border-gray-300 p-3">
           <h4 className="text-bold text-xl ">Whats happening?</h4>
           {newsResults.slice(0, change).map((article) => (
             <News key={article.title} article={article} />
@@ -34,26 +34,34 @@ const Widgets = ({ newsResults, randomUserResults }) => {
           </button>
         </div>
 
-        <div className="xl:w-[75%] w-[90%] text-gray-600 space-y-3 bg-gray-100 rounded-xl p-2">
+        <div className="xl:w-[75%] w-[90%] sm:w-[90%]  text-gray-600  bg-gray-100 rounded-xl pl-2 pr-2 pt-1 space-y-2">
           <h4 className="text-gray-700 text-lg font-bold">Who to Follow?</h4>
           {randomUserResults.slice(0, changeR).map((randomUser) => (
             <div
               key={randomUser.login.username}
-              className="flex items-center justify-between hover:bg-gray-200 p-2 cursor-pointer rounded-xl">
+              className="flex items-center justify-between hover:bg-gray-200 p-1 cursor-pointer rounded-xl overflow-x-auto">
               <img
                 src={randomUser.picture.thumbnail}
                 alt=""
-                className="rounded-lg w-12"
+                className="rounded-lg lg:w-12 w-6 "
               />
-              <div className="flex-col  ">
-                <div className="flex space-x-1.5 font-serif">
-                  <h4>{randomUser.name.title}</h4>
-                  <h4>{randomUser.name.first}</h4>
-                  <h4>{randomUser.name.last}</h4>
+              <div className="flex-col text-sm sm:text-md ">
+                <div className="flex space-x-1 font-serif">
+                  <h4 className="text-[12px] lg:text-xl">
+                    {randomUser.name.title}
+                  </h4>
+                  <h4 className="text-[12px] lg:text-xl">
+                    {randomUser.name.first}
+                  </h4>
+                  <h4 className="text-[12px] lg:text-xl">
+                    {randomUser.name.last}
+                  </h4>
                 </div>
-                <h4 className="text-gray-400">@{randomUser.login.username}</h4>
+                <h4 className="text-gray-400 text-[10px] lg:text-lg">
+                  @{randomUser.login.username}
+                </h4>
               </div>
-              <button className="rounded-xl w-[5rem] h-7  bg-blue-400 hover:bg-blue-500 text-white">
+              <button className="rounded-xl p-[0.2rem] lg:p-2 bg-blue-400 hover:bg-blue-500 text-white">
                 follow
               </button>
             </div>
